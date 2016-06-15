@@ -1,0 +1,179 @@
+<!--View Information-->
+<!--View name : Dashboard-->
+<!--Controller name : dashboardCtrl-->
+<!--Controller path : www/templates/material-user-interface/dashboard/js/controllers.js-->
+<!--State name : app.dashboard-->
+<!--URL : #app/dashboard-->
+
+<ion-view view-title="">
+
+    <!--right button on navigation bar-->
+    <!--ion-nav-buttons side="right">
+        <md-button class="md-icon-button ion-nav-button-right" ng-click="goToSetting()"
+                   aria-label="Setting">
+            <i class="ion-android-more-vertical"></i>
+        </md-button>
+    </ion-nav-buttons--> <!--end right button on navigation bar-->
+
+    <!--toolbar section-->
+    <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium">
+        <div>
+            <h1>XL IOT</h1>
+
+            <h2>Simplenewway</h2>
+        </div>
+        <!--a class="md-button md-accent md-fab fab-toolbar-medium"
+           aria-label="Add">
+            <i class="icon ion-plus"></i>
+        </a-->
+
+    </md-toolbar><!--end toolbar section-->
+
+    <!--dashboard section-->
+    <ion-content id="dashboard-content" class="dashboard-background">
+
+        <!--list section-->
+
+        <!--Below code it will disable animation to better performance-->
+        <div ng-if="!isAnimated" class="menu-list">
+            <md-subheader class="md-warn">Access our Portal in : </md-subheader>
+            <div class="row menu-item"  ng-click="navigateTo('app.wordpressLogin')">
+                <div class="col-25">
+                    <i class="fa fa-wordpress"></i>
+                </div>
+                <div class="col-50">
+                    <span>Simplenewway News</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </div>
+            <div class="row menu-item"  ng-click="navigateTo('app.facebookLogin')">
+                <div class="col-25">
+                    <i class="fa fa-facebook"></i>
+                </div>
+                <div class="col-50">
+                    <span>Facebook Simplenewway</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </div>
+            <!--div class="row menu-item"  ng-click="navigateTo('app.googlePlusLogin')">
+                <div class="col-25">
+                    <i class="fa fa-google-plus"></i>
+                </div>
+                <div class="col-50">
+                    <span>Google Plus</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </div>
+            <div class="row menu-item"  ng-click="navigateTo('app.instagramLogin')">
+                <div class="col-25">
+                    <i class="fa fa-instagram"></i>
+                </div>
+                <div class="col-50">
+                    <span>Instagram</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </div>
+            <div class="row menu-item"  ng-click="navigateTo('app.foursquareLogin')">
+                <div class="col-25">
+                    <i class="fa fa-foursquare"></i>
+                </div>
+                <div class="col-50">
+                    <span>Foursquare</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </div>
+            <div class="row menu-item"  ng-click="navigateTo('app.dropboxLogin')">
+                <div class="col-25">
+                    <i class="fa fa-dropbox"></i>
+                </div>
+                <div class="col-50">
+                    <span>Dropbox</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </div-->
+        <!--Below code it will show animation when selecting row.-->
+        <md-list ng-if="isAnimated">
+            <md-subheader class="md-warn">Access our Portal in : </md-subheader>
+            <md-list-item class="md-list-item-default row" ng-click="navigateTo('app.wordpressLogin')">
+                <div class="col-25">
+                    <i class="fa fa-wordpress"></i>
+                </div>
+                <div class="col-50">
+                    <span>Simplenewway News</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+
+            </md-list-item>
+            <md-list-item class="md-list-item-default row" ng-click="navigateTo('app.facebookLogin')">
+                <div class="col-25">
+                    <i class="fa fa-facebook"></i>
+                </div>
+                <div class="col-50">
+                    <span>Facebook Simplenewway</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </md-list-item>
+            <!--md-list-item class="md-list-item-default row" ng-click="navigateTo('app.googlePlusLogin')">
+                <div class="col-25">
+                    <i class="fa fa-google-plus"></i>
+                </div>
+                <div class="col-50">
+                    <span>Google Plus</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </md-list-item>
+            <md-list-item class="md-list-item-default row" ng-click="navigateTo('app.instagramLogin')">
+                <div class="col-25">
+                    <i class="fa fa-instagram"></i>
+                </div>
+                <div class="col-50">
+                    <span>Instagram</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </md-list-item>
+            <md-list-item class="md-list-item-default row" ng-click="navigateTo('app.foursquareLogin')">
+                <div class="col-25">
+                    <i class="fa fa-foursquare"></i>
+                </div>
+                <div class="col-50">
+                    <span>Foursquare</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </md-list-item>
+            <md-list-item class="md-list-item-default row" ng-click="navigateTo('app.dropboxLogin')">
+                <div class="col-25">
+                    <i class="fa fa-dropbox"></i>
+                </div>
+                <div class="col-50">
+                    <span>Dropbox</span>
+                </div>
+                <div class="col-25 menu-more">
+                    <i class="ion-android-more-vertical"></i>
+                </div>
+            </md-list-item>
+        </md-list-->
+        <!--end list section-->
+    </ion-content><!--end dashboard section-->
+</ion-view>
